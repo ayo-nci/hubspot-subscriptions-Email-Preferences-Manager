@@ -91,7 +91,7 @@ function create_unsubscribe_reason_checkboxes() {
 }
 
 function handleSubmit(e) {
-    const url = `https://api.hsforms.com/submissions/v3/integration/submit/26661042/1bb1fc8b-269f-466d-818a-4e2703f7955d`;
+    const url = `https://api.hsforms.com/submissions/v3/integration/submit/<portal-id>/<form-id>`;
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
     const unsubscribe_reasons = getUnsubscribeReasons(formProps)
